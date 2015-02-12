@@ -24,31 +24,29 @@
 	  <p>
 	  {{winedotcomData.Description}}
 		<p><a href="{{winedotcomData.Url}}" title='Purchase from Wine.com'>Purchase from Wine.com</a> for ${{winedotcomData.PriceRetail}}</p>
-		{{winedotcomData.Type}}
-		{{winedotcomData.Year}}
-		{{winedotcomData.Appellation.Name}}
-		{{winedotcomData.Varietal.Name}}
-		{{winedotcomData.Vineyard.GeoLocation.Lat}}
-		{{winedotcomData.Vineyard.GeoLocation.Lon}}
-		{{winedotcomData.winedotcomDataAttribute.Name}}
-		{{winedotcomData.Label.Name}}
-		{{winedotcomData.Ratings.HighestScore}}
-		{{winedotcomData.Ratings.Rating.mame}}
-		{{winedotcomData.Rating.Score}}
-		{{winedotcomData.Vintages.Vintage.Name}}
-		{{winedotcomData.Vintages.Vintage.Ratings}}
-		{{winedotcomData.Community.Reviews.HighestScore}}
+		<p>type: {{winedotcomData.Type}}</p>
+		<p>Vintage: {{winedotcomData.Year}}</p>
+		<p>Appellation: {{winedotcomData.Appellation.Name}}</p>
+		<p>Product Attributes name: {{winedotcomData.ProductAttributes.Name}}</p>
+		<p>Varietal: {{winedotcomData.Varietal.Name}}</p>
+		<p>Attribute: {{winedotcomData.winedotcomDataAttribute.Name}}</p>
+		<p>Label: {{winedotcomData.Label.Name}}</p>
+		<p>Highest Score: {{winedotcomData.Ratings.HighestScore}}</p>
+		<p>Ratings name: {{winedotcomData.Ratings.Rating.mame}}</p>
+		<p>Rating Score: {{winedotcomData.Rating.Score}}</p>
+		<p>Vintage name: {{winedotcomData.Vintages.Vintage.Name}}</p>
+		<p>Vintage Rating: {{winedotcomData.Vintages.Vintage.Ratings}}</p>
+		<p>Highest Score: {{winedotcomData.Community.Reviews.HighestScore}}</p>
 		</p>
 	</div>
 
 	<div class="grid grid-module"> 
 		<img src="{{snoothData.image}}"/>
-		<p>
-		{{snoothData.name}}
-		{{snoothData.price}}
-		{{snoothData.snoothrank}}
-		{{snoothData.region}}
-		</p>
+
+		<p>Name: {{snoothData.name}}</p>
+		<p>Price: {{snoothData.price}}</p>
+		<p>Snooth Rank: {{snoothData.snoothrank}}</p>
+		<p>Region: {{snoothData.region}}</p>
 	</div>
 
 </template>

@@ -1,10 +1,11 @@
 a{
   text-decoration: none;
   &, &:link, &:visited, &:active{
-    color: $text;
+    color:  #5E1C3E;
     font-weight: bold;
+    transition: all 0.4s ease;
   }
   &:hover{
-    color: $red;
+    color: #b5b0b0;
   }
 }

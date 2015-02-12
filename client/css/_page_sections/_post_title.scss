@@ -1,0 +1,20 @@
+/*
+**
+*** Post Title
+**
+*/
+
+.postTitle_winery
+{
+	font-size: 0.5em;
+	color: themeColor(muted);
+	display: inline-block;
+	@media (min-width: 768px) { font-size: 0.6em; }
+}
+.post-heading .post-title:visited {
+  color: themeColor(two);
+}
+.post-title:hover
+{
+	color: themeColor(muted) !important;
+}

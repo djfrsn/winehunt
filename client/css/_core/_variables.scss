@@ -15,7 +15,7 @@ $font_2: 'montserratbold';
 
 // Basic colors 
 $primary: rgb(34, 13, 18); // light blue
-$secondary: #F5EDE3; // light tan
+$secondary: #5E1C3E; // light tan
 $tertiary: #E1D4C0; // mid tan
 $quadrant: #104386; // dark blue
 $fracture: #FF6600; // orange
@@ -23,9 +23,10 @@ $black: #333333; // off black
 
 // Create a map for your theme
 $stoic: (
-	bg: $secondary,
+	bg: #F5EDE3,
 	fg: $quadrant,
 	txt: $primary,
+	muted: #b5b0b0,
 	blk: $black,
 	one: $primary,
 	two: $secondary,
