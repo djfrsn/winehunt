@@ -1,0 +1,27 @@
+/*
+**
+*** General Styles
+**
+*/
+
+// General
+html
+{
+	/* Document level font adjustments */
+	/* Mobile First @ 320px-480px */
+	font-size: 12px;
+}
+
+body
+{
+  font-family: 'open_sansregular';
+  background-color: themeColor(bg);
+  color: themeColor(txt);
+}
+
+
+// Utility
+.underline
+{
+  text-decoration: underline;
+}

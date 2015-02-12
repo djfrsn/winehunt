@@ -135,6 +135,22 @@ postSchemaObject = {
       omit: true
     }
   },
+  snoothData: {
+    type: Object,
+    blackbox: true,
+    optional: true,
+    autoform: {
+      omit: true
+    }
+  },
+  winedotcomData: {
+    type: Object,
+    blackbox: true,
+    optional: true,
+    autoform: {
+      omit: true
+    }
+  },
   status: {
     type: Number,
     optional: true,
@@ -359,6 +375,10 @@ submitPost = function (post) {
 
   if (Meteor.isServer) {
     Meteor.defer(function () { // use defer to avoid holding up client
+
+      if(post.status === STATUS_APPROVED)
+        Meteor.call("fetchAPIData",post._id);
+
       // run all post submit server callbacks on post object successively
       post = postAfterSubmitMethodCallbacks.reduce(function(result, currentFunction) {
           return currentFunction(result);
@@ -501,11 +521,21 @@ Meteor.methods({
       if (!post.postedAt)
         set.postedAt = new Date();
 
+      //call the api - 
+      //set.snoothData = //json call
+      
+
+      
+
       var result = Posts.update(post._id, {$set: set}, {validate: false});
 
       // --------------------- Server-Side Async Callbacks --------------------- //
       if (Meteor.isServer) {
         Meteor.defer(function () { // use defer to avoid holding up client
+
+          Meteor.call("fetchAPIData",post._id);
+
+
           // run all post submit server callbacks on post object successively
           post = postApproveCallbacks.reduce(function(result, currentFunction) {
               return currentFunction(result);

@@ -1,0 +1,54 @@
+
+<template name="winedetails">
+	  
+	<div class="grid grid-module">
+	  
+	  <h4>Wine Details</h4>
+	  
+	  <hr>
+	  
+	  <div class='box'>
+			<img src="{{winedotcomData.Vineyard.ImageUrl}}"/>
+			<p>Vineyard: 
+			<a href="{{winedotcomData.Vineyard.Url}}" title='{{winedotcomData.Vineyard.Name}}'>
+			{{winedotcomData.Vineyard.Name}}
+			</a>
+			</p>
+		</div>
+		
+		<div>
+	    {{#each winedotcomData.Labels}}
+				<img src="{{Url}}"/>
+			{{/each}}
+	  </div>
+	  <p>
+	  {{winedotcomData.Description}}
+		<p><a href="{{winedotcomData.Url}}" title='Purchase from Wine.com'>Purchase from Wine.com</a> for ${{winedotcomData.PriceRetail}}</p>
+		{{winedotcomData.Type}}
+		{{winedotcomData.Year}}
+		{{winedotcomData.Appellation.Name}}
+		{{winedotcomData.Varietal.Name}}
+		{{winedotcomData.Vineyard.GeoLocation.Lat}}
+		{{winedotcomData.Vineyard.GeoLocation.Lon}}
+		{{winedotcomData.winedotcomDataAttribute.Name}}
+		{{winedotcomData.Label.Name}}
+		{{winedotcomData.Ratings.HighestScore}}
+		{{winedotcomData.Ratings.Rating.mame}}
+		{{winedotcomData.Rating.Score}}
+		{{winedotcomData.Vintages.Vintage.Name}}
+		{{winedotcomData.Vintages.Vintage.Ratings}}
+		{{winedotcomData.Community.Reviews.HighestScore}}
+		</p>
+	</div>
+
+	<div class="grid grid-module"> 
+		<img src="{{snoothData.image}}"/>
+		<p>
+		{{snoothData.name}}
+		{{snoothData.price}}
+		{{snoothData.snoothrank}}
+		{{snoothData.region}}
+		</p>
+	</div>
+
+</template>

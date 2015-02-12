@@ -1,0 +1,78 @@
+/*
+**
+*** Water
+**
+*/
+
+/* Water
+*/
+@mixin respond-to($media) {
+	@if $media == sxs { /* 480px */
+		@media (min-width: 30em) { @content; }		
+	}
+	@if $media == xs { /* 768 px */
+		@media (min-width: 48em) { @content; }		
+	}
+	@if $media == sm { /* 992px */
+		@media (min-width: 62em) { @content; }		
+	}
+	@if $media == md { /* 1200px */
+		@media (min-width: 75em) { @content; }		
+	}
+	@if $media == lg { /* 1440px */
+		@media (min-width: 90em) { @content; }		
+	}
+}
+
+/* Custom Media Queries(CMQ)
+*/
+@mixin media($type: '', $max-width: '', $min-width: '')
+{
+	@if $type == max-width 
+	{
+		@media (max-width: $max-width) 
+		{ 
+			@content;
+		}
+	}
+	@if $type == min-width 
+	{
+		@media (min-width: $min-width)
+			{
+				@content;
+			}
+	}
+	@if $type == minMax-width 
+	{
+		@media (min-width: $min-width) and (max-width: $max-width)
+			{ 
+				@content;
+			}
+	}
+}
+
+/* CMQ Usage
+
+
+==== Max-Width
+@include media(max-width, 275px)
+	{
+		color: red;
+	}
+
+==== Min-Width
+@include media(min-width, 0px, 275px)
+	{
+		color: white;
+	}
+
+==== minMax-Width
+@include media(minMax-width, 275px, 320px)
+	{
+		color: blue;
+	}
+
+
+*/
+
+

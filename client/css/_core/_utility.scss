@@ -1,0 +1,63 @@
+/*
+**
+*** Utility Styles
+**
+*/
+
+// Import external utils
+@import "_utils/_paper";
+@import "_utils/_frame";
+
+
+// Positioning
+
+/* Center intro content w/ Tables
+*/
+.table
+{
+	display: table;
+	margin-bottom: 0;
+}
+
+.table__cell
+{
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+	height: 100%;
+}
+
+// Vertical Align
+@mixin vertical-align {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+// Text
+
+// Underline
+.underline
+{
+    text-decoration: underline;
+}
+
+// Text-shadow Mixins
+$light: 0 0.02em #fff;
+$dark: 0 0.02em $black;
+
+@mixin text-shadow($ts-style: $light) {
+  text-shadow: $ts-style;
+}
+
+.text-shadow-light
+{
+  @include text-shadow();
+}
+
+.text-shadow-dark
+{
+  @include text-shadow($dark);
+}

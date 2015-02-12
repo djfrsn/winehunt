@@ -1,0 +1,45 @@
+
+
+/*
+**
+*** Variables
+**
+*/
+
+// Font Family
+
+$font_1: 'fira_sansmedium';
+$font_2: 'montserratbold';
+
+// Color Scheme
+
+// Basic colors 
+$primary: #6699FF; // light blue
+$secondary: #F5EDE3; // light tan
+$tertiary: #E1D4C0; // mid tan
+$quadrant: #104386; // dark blue
+$fracture: #FF6600; // orange
+$black: #333333; // off black
+
+// Create a map for your theme
+$stoic: (
+	bg: $secondary,
+	fg: $quadrant,
+	txt: $quadrant,
+	blk: $black,
+	one: $primary,
+	two: $secondary,
+	three: $tertiary,
+	four: $quadrant,
+	five: $fracture
+);
+
+// Simply change the variable $theme
+$theme: $stoic;
+
+// Color setting helper function
+@function themeColor($key) {
+	$val: map-get($theme, $key);
+	@return $val;
+}
+

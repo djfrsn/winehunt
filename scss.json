@@ -3,4 +3,9 @@
   "outputStyle": "compressed",
   "sourceComments": true,
   "sourceMap": true
+},
+{
+  "includePaths": [
+    "client/css"
+  ]
 }
