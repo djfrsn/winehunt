@@ -19,28 +19,77 @@
 	border-radius: 3px;
 	background: themeColor(three);
 	p { text-align: center; }
-	@media (min-width: 768px) { display: inline-block; width: 300px;  min-height: 152px; margin: 0; }
+	@media (min-width: 1001px) { display: inline-block; width: 300px;  min-height: 152px; margin: 0; }
 }
 
 .grid-box + .grid-box
 {
 	margin: 1em auto; 
-	@media (min-width: 768px) { margin: 0; }
+	@media (min-width: 1001px) { margin: 0; }
 }
 
 .grid-box.one
 {
-		@media (min-width: 768px) { margin-right: 1em; }
+		@media (min-width: 1001px) { margin-right: 1em; }
+}
 
+
+.grid-box-wrapper
+{
+	margin: 1em auto 0;
+	@media (min-width: 768px) 	
+	{ 
+		width: 620px;
+		margin: 0 auto;
+	}
+}
+
+.grid-box-wrapper
+{
+	@media (min-width: 1001px) 
+	{ 
+		width: initial;
+		margin: 0;
+		display: inline-block;
+	}
 }
 .grid-box.two
 {
-	@media (min-width: 768px) { margin-right: 1em; }
+	@media (min-width: 768px) 
+	{ 
+		display: inline-block; 
+		width: 300px;  
+		min-height: 152px; 
+		margin: 1em 1em 0 0;
+	}
+	@media (min-width: 1001px) 
+	{ 
+		margin-right: 1em;
+		position: relative;
+		top: -4px;
+		margin: 1.5em 1em 0 0;
+		min-height: 196px;
+	}
 }
 .grid-box.three
 {
 	margin-bottom: 0;
-	@media (min-width: 768px) {  }
+	@media (min-width: 768px) 
+	{ 
+		display: inline-block; 
+		width: 300px;
+		min-height: 152px; 
+		margin: 0; 
+		position: relative;
+		top: -14px;
+		min-height: 188px;
+	}
+	@media (min-width: 1001px) 
+	{ 
+		position: relative;
+		top: -18px;
+		min-height: 192px;
+	}
 }
 
 .grid-box-title
@@ -48,10 +97,9 @@
 	text-decoration: underline;
 	color: themeColor(four);
 	font-size: 0.8em;
-	@media (min-width: 768px) { font-size: 1em; }
 }
 
-/* Center Images
+/* Images
 */
 .winedetails_label img, 
 .grid-box-vendor-logo img
@@ -61,3 +109,9 @@
   margin-right:auto;
 }
 
+svg.grid-gox-star
+{
+	position: relative;
+	top: 0.3em;
+	fill: #FFD700;
+}
