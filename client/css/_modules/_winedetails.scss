@@ -20,16 +20,6 @@
 	p { text-align: center; }
 }
 
-.grid-box-line
-{
-	height: 1px;
-	width: 100%;
-	margin: 1em 0;
-	background: rgb(154, 154, 154);
-	display: block;
-	@media (min-width: 768px) { display: none; }
-}
-
 .grid-box + .grid-box
 {
 	margin: 1em auto; 

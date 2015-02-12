@@ -9,26 +9,28 @@
 					<img src="{{Url}}"/>
 				{{/each}}
 		  </div>
-			<div class="grid-box-line"></div>
+			<hr>
 			<p>Type: {{snoothData.type}}</p>
 			<p>Varietal: {{snoothData.varietal}}</p>
-			<div class="grid-box-line"></div>
+			<hr>
 			<p>Vintage: {{snoothData.vintage}}</p>
 			<p>Appellation: {{winedotcomData.Appellation.Name}}</p>
 		</div>
 
 		<div class="grid-box two">
 			<a class='grid-box-vendor-logo' href="http://www.wine.com/" title="Wine.com the destination for Wine and Wine Gifts"><img src="http://cache.wine.com/images/logos/80x80_winecom_logo.png" alt="Wine.com the destination for Wine and Wine Gifts" /></a>
+			<hr>
 			<p><a href="{{winedotcomData.Url}}" title='Purchase from Wine.com'>Purchase from Wine.com</a> for ${{winedotcomData.PriceRetail}}</p>
-			<p>Wine.com Highest Score: {{winedotcomData.Ratings.HighestScore}}</p>
-			<p>Wine.com Commnunity Score: {{winedotcomData.Community.Reviews.HighestScore}}/5 Stars</p>
+			<p>Highest Score: {{winedotcomData.Ratings.HighestScore}}</p>
+			<p>Commnunity Score: {{winedotcomData.Community.Reviews.HighestScore}}/5 Stars</p>
 		</div>
 		
 		<div class="grid-box three">
 			<a class='grid-box-vendor-logo' href="http://www.snooth.com/" title="Snooth | Buy Wine Online - Wine Ratings - Gift Wine - Wine Recommendations"><img src="/img/snooth_logo.gif" alt="Snooth | Buy Wine Online - Wine Ratings - Gift Wine - Wine Recommendations" /></a>
+			<hr>
 			<p><a href="{{snoothData.link}}" title='{{snoothData.name}}' target='_blank'>Purchase from Snooth.com</a> at ${{snoothData.price}}</p>
-			<p>Snooth Rank: {{snoothData.snoothrank}}</p>
-			<p>Snooth Reviews: {{snoothData.num_reviews}}</p>
+			<p>Rank: {{snoothData.snoothrank}}</p>
+			<p>Reviews: {{snoothData.num_reviews}}</p>
 		</div>
 
 	</div> 
