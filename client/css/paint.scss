@@ -14,8 +14,9 @@
 
 // Styles by section type
 
-@import "_page_sections/post_submit";
-@import "_page_sections/post_title";
+@import "_modules/post_submit";
+@import "_modules/post_title";
+@import "_modules/winedetails";
  
 // Overrides
 @import "_core/overrides";
