@@ -4,17 +4,30 @@
 **
 */
 
-.postTitle_winery
+.postTitle_vineyard
 {
 	font-size: 0.5em;
 	color: themeColor(muted);
 	display: inline-block;
 	@media (min-width: 768px) { font-size: 0.6em; }
 }
+
+
+/* Post title Vinyard Name
+*/
+a.postTitle_vineyard_link
+{
+	color: themeColor(two);
+}
+
 .post-heading .post-title:visited {
   color: themeColor(two);
 }
 .post-title:hover
+{
+	color: themeColor(muted) !important;
+}
+.postTitle_vineyard_link:hover
 {
 	color: themeColor(muted) !important;
 }

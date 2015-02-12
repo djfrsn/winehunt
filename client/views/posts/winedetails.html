@@ -10,7 +10,7 @@
 	  <div class='box'>
 			<img src="{{winedotcomData.Vineyard.ImageUrl}}"/>
 			<p>Vineyard: 
-			<a href="{{winedotcomData.Vineyard.Url}}" title='{{winedotcomData.Vineyard.Name}}'>
+			<a href="{{winedotcomData.GeoLocation.Url}}" title='{{winedotcomData.Vineyard.Name}}' target='_blank'>
 			{{winedotcomData.Vineyard.Name}}
 			</a>
 			</p>
@@ -36,7 +36,7 @@
 		<p>Rating Score: {{winedotcomData.Rating.Score}}</p>
 		<p>Vintage name: {{winedotcomData.Vintages.Vintage.Name}}</p>
 		<p>Vintage Rating: {{winedotcomData.Vintages.Vintage.Ratings}}</p>
-		<p>Highest Score: {{winedotcomData.Community.Reviews.HighestScore}}</p>
+		<p>Current Commnunity Score: {{winedotcomData.Community.Reviews.HighestScore}}/5 Stars</p>
 		</p>
 	</div>
 
@@ -46,7 +46,6 @@
 		<p>Name: {{snoothData.name}}</p>
 		<p>Price: {{snoothData.price}}</p>
 		<p>Snooth Rank: {{snoothData.snoothrank}}</p>
-		<p>Region: {{snoothData.region}}</p>
 	</div>
 
 </template>
