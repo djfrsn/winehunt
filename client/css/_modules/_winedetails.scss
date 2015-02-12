@@ -13,7 +13,10 @@
 	margin: 0 auto;
 	min-width: 200px;
 	min-height: 50px;
-	border: 1px solid black;
+	border-bottom: 1px solid #e7eff2;
+	box-shadow: 0 1px 1px rgba(0,0,0,0.15);
+	border-radius: 3px;
+	background: themeColor(three);
 	p { text-align: center; }
 }
 
@@ -21,7 +24,8 @@
 {
 	height: 1px;
 	width: 100%;
-	background: black;
+	margin: 1em 0;
+	background: rgb(154, 154, 154);
 	display: block;
 	@media (min-width: 768px) { display: none; }
 }
