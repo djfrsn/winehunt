@@ -14,7 +14,7 @@ $font_2: 'montserratbold';
 // Color Scheme
 
 // Basic colors 
-$primary: #6699FF; // light blue
+$primary: rgb(34, 13, 18); // light blue
 $secondary: #F5EDE3; // light tan
 $tertiary: #E1D4C0; // mid tan
 $quadrant: #104386; // dark blue
@@ -25,7 +25,7 @@ $black: #333333; // off black
 $stoic: (
 	bg: $secondary,
 	fg: $quadrant,
-	txt: $quadrant,
+	txt: $primary,
 	blk: $black,
 	one: $primary,
 	two: $secondary,
