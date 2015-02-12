@@ -23,19 +23,13 @@
 	  </div>
 	  <p>
 	  {{winedotcomData.Description}}
-		<p><a href="{{winedotcomData.Url}}" title='Purchase from Wine.com'>Purchase from Wine.com</a> for ${{winedotcomData.PriceRetail}}</p>
-		<p>type: {{winedotcomData.Type}}</p>
+		<p><a href="{{winedotcomData.Url}}" title='Purchase from Wine.com'>Purchase from Wine.com</a> at ${{winedotcomData.PriceRetail}}</p>
 		<p>Vintage: {{winedotcomData.Year}}</p>
 		<p>Appellation: {{winedotcomData.Appellation.Name}}</p>
-		<p>Product Attributes name: {{winedotcomData.ProductAttributes.Name}}</p>
-		<p>Varietal: {{winedotcomData.Varietal.Name}}</p>
-		<p>Attribute: {{winedotcomData.winedotcomDataAttribute.Name}}</p>
-		<p>Label: {{winedotcomData.Label.Name}}</p>
+		Taste: {{#each winedotcomData.ProductAttributes}}
+			<p class="den">{{Name}}</p>
+		{{/each}}
 		<p>Highest Score: {{winedotcomData.Ratings.HighestScore}}</p>
-		<p>Ratings name: {{winedotcomData.Ratings.Rating.mame}}</p>
-		<p>Rating Score: {{winedotcomData.Rating.Score}}</p>
-		<p>Vintage name: {{winedotcomData.Vintages.Vintage.Name}}</p>
-		<p>Vintage Rating: {{winedotcomData.Vintages.Vintage.Ratings}}</p>
 		<p>Current Commnunity Score: {{winedotcomData.Community.Reviews.HighestScore}}/5 Stars</p>
 		</p>
 	</div>
@@ -43,9 +37,11 @@
 	<div class="grid grid-module"> 
 		<img src="{{snoothData.image}}"/>
 
-		<p>Name: {{snoothData.name}}</p>
-		<p>Price: {{snoothData.price}}</p>
+		<p><a href="{{snoothData.link}}" title='{{snoothData.name}}' target='_blank'>Purchase from Snooth.com</a> at ${{snoothData.price}}</p>
 		<p>Snooth Rank: {{snoothData.snoothrank}}</p>
+		<p>Type: {{snoothData.type}}</p>
+		<p>Varietal: {{snoothData.varietal}}</p>
+		<p>Num_reviews: {{snoothData.num_reviews}}</p>
 	</div>
 
 </template>
