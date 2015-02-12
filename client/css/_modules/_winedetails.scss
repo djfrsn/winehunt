@@ -12,38 +12,43 @@
 	padding: 1em;
 	margin: 0 auto;
 	min-width: 200px;
+	max-width: 320px;
 	min-height: 50px;
 	border-bottom: 1px solid #B6AB98;
 	box-shadow: 0 1px 1px rgba(0,0,0,0.15);
 	border-radius: 3px;
 	background: themeColor(three);
 	p { text-align: center; }
+	@media (min-width: 768px) { display: inline-block; width: 300px;  min-height: 152px; margin: 0; }
 }
 
 .grid-box + .grid-box
 {
 	margin: 1em auto; 
+	@media (min-width: 768px) { margin: 0; }
 }
 
 .grid-box.one
 {
-	
+		@media (min-width: 768px) { margin-right: 1em; }
+
 }
 .grid-box.two
 {
-	
+	@media (min-width: 768px) { margin-right: 1em; }
 }
 .grid-box.three
 {
-	
-}
-.grid-box.four
-{
-	
-}
-.grid-box.five
-{
 	margin-bottom: 0;
+	@media (min-width: 768px) {  }
+}
+
+.grid-box-title
+{
+	text-decoration: underline;
+	color: themeColor(four);
+	font-size: 0.8em;
+	@media (min-width: 768px) { font-size: 1em; }
 }
 
 /* Center Images
