@@ -1,47 +1,32 @@
 
 <template name="winedetails">
 	  
-	<div class="grid grid-module">
-	  
-	  <h4>Wine Details</h4>
-	  
-	  <hr>
-	  
-	  <div class='box'>
-			<img src="{{winedotcomData.Vineyard.ImageUrl}}"/>
-			<p>Vineyard: 
-			<a href="{{winedotcomData.GeoLocation.Url}}" title='{{winedotcomData.Vineyard.Name}}' target='_blank'>
-			{{winedotcomData.Vineyard.Name}}
-			</a>
-			</p>
-		</div>
-		
+	<div class="grid grid-module"> 
+	  	
 		<div>
 	    {{#each winedotcomData.Labels}}
 				<img src="{{Url}}"/>
 			{{/each}}
 	  </div>
-	  <p>
-	  {{winedotcomData.Description}}
+		
 		<p><a href="{{winedotcomData.Url}}" title='Purchase from Wine.com'>Purchase from Wine.com</a> at ${{winedotcomData.PriceRetail}}</p>
-		<p>Vintage: {{winedotcomData.Year}}</p>
-		<p>Appellation: {{winedotcomData.Appellation.Name}}</p>
-		Taste: {{#each winedotcomData.ProductAttributes}}
-			<p class="den">{{Name}}</p>
-		{{/each}}
-		<p>Highest Score: {{winedotcomData.Ratings.HighestScore}}</p>
-		<p>Current Commnunity Score: {{winedotcomData.Community.Reviews.HighestScore}}/5 Stars</p>
-		</p>
-	</div>
-
-	<div class="grid grid-module"> 
-		<img src="{{snoothData.image}}"/>
-
+		<p>Wine.com Highest Score: {{winedotcomData.Ratings.HighestScore}}</p>
+		<p>Wine.com Commnunity Score: {{winedotcomData.Community.Reviews.HighestScore}}/5 Stars</p>
+		
+		<hr>
+		
 		<p><a href="{{snoothData.link}}" title='{{snoothData.name}}' target='_blank'>Purchase from Snooth.com</a> at ${{snoothData.price}}</p>
 		<p>Snooth Rank: {{snoothData.snoothrank}}</p>
+		<p>Snooth Reviews: {{snoothData.num_reviews}}</p>
+		
+		<hr>
+
+		<p>Vintage: {{snoothData.vintage}}</p>
+		<p>Appellation: {{winedotcomData.Appellation.Name}}</p>
+		
+
 		<p>Type: {{snoothData.type}}</p>
 		<p>Varietal: {{snoothData.varietal}}</p>
-		<p>Num_reviews: {{snoothData.num_reviews}}</p>
 	</div>
 
 </template>
