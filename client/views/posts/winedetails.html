@@ -3,32 +3,30 @@
 	  
 	<div class="grid grid-module"> 
 	  
-	  <div class="grid-box">	
+	  <div class="grid-box one">	
 			<div class='winedetails_label'>
 		    {{#each winedotcomData.Labels}}
 					<img src="{{Url}}"/>
 				{{/each}}
 		  </div>
+			<div class="grid-box-line"></div>
+			<p>Type: {{snoothData.type}}</p>
+			<p>Varietal: {{snoothData.varietal}}</p>
+			<hr>
+			<p>Vintage: {{snoothData.vintage}}</p>
+			<p>Appellation: {{winedotcomData.Appellation.Name}}</p>
 		</div>
 
-		<div class="grid-box">
+		<div class="grid-box two">
 			<p><a href="{{winedotcomData.Url}}" title='Purchase from Wine.com'>Purchase from Wine.com</a> at ${{winedotcomData.PriceRetail}}</p>
 			<p>Wine.com Highest Score: {{winedotcomData.Ratings.HighestScore}}</p>
 			<p>Wine.com Commnunity Score: {{winedotcomData.Community.Reviews.HighestScore}}/5 Stars</p>
 		</div>
 		
-		<div class="grid-box">
+		<div class="grid-box three">
 			<p><a href="{{snoothData.link}}" title='{{snoothData.name}}' target='_blank'>Purchase from Snooth.com</a> at ${{snoothData.price}}</p>
 			<p>Snooth Rank: {{snoothData.snoothrank}}</p>
 			<p>Snooth Reviews: {{snoothData.num_reviews}}</p>
-		</div>
-		<div class="grid-box">
-			<p>Vintage: {{snoothData.vintage}}</p>
-			<p>Appellation: {{winedotcomData.Appellation.Name}}</p>
-		</div>
-		<div class="grid-box">
-			<p>Type: {{snoothData.type}}</p>
-			<p>Varietal: {{snoothData.varietal}}</p>
 		</div>
 
 	</div> 

@@ -11,16 +11,46 @@
 {
 	padding: 1em;
 	margin: 0 auto;
-	max-width: 200px;
+	min-width: 200px;
 	min-height: 50px;
 	border: 1px solid black;
 	p { text-align: center; }
 }
+
+.grid-box-line
+{
+	height: 1px;
+	width: 100%;
+	background: black;
+	display: block;
+	@media (min-width: 768px) { display: none; }
+}
+
 .grid-box + .grid-box
 {
 	margin: 1em auto; 
 }
 
+.grid-box.one
+{
+	
+}
+.grid-box.two
+{
+	
+}
+.grid-box.three
+{
+	
+}
+.grid-box.four
+{
+	
+}
+.grid-box.five
+{
+	margin-bottom: 0;
+}
 
 /* Wine Label
 */
